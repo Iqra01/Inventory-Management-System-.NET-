@@ -1,0 +1,40 @@
+﻿<html>
+
+<head>
+    <title>
+        Add Item
+    </title>
+</head>
+
+<body>
+    <h2>Add Item</h2>
+
+    <form action="/Home/Added" method="get">
+
+        <strong>Name:</strong>
+        <input type="text" name="name" required oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);" />
+
+        <strong>Brand:</strong>
+        <input type="text" name="brand" required oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);" />
+
+        <strong>Price:</strong>
+        <input type="number" name="price" required min="1" />
+
+        <strong>Category:</strong>
+        <select name="category">
+            <option>TOYS</option>
+            <option>COSMETICS</option>
+            <option>SPORTGOOD</option>
+            <option>GROCERYITEM</option>
+        </select>
+
+        <p>
+            <strong>Description:</strong>
+            <textarea name = "description"
+                  rows = "3"
+                  cols = "80" required></textarea>
+        </p>
+        <input type="submit" value="ADD">
+    </form>
+</body>
+</html>
